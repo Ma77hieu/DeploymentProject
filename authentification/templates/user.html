@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Mon compte</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<!-- welcome message-->
+<div class="page-section bg-dark bg-results-custom p-3" id="welcome"
+    style="background:url(../assets/img/bg-masthead.jpg)">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="text-white col-lg-8 text-center ">
+                <p class="h2 mb-5">
+                    Bonjour {{form.first_name}}
+                    <!--get the user first name-->
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- used to display informational messaages to the user (logout for example)-->
+{% if user_message%}
+<div class="alert alert-success mb-1 mt-4" role="alert" name="user_message">
+    {{user_message}}
+</div>
+{% endif %}
+<div class="container my-5 h-50 ">
+    <div class="row d-flex justify-content-center mb-4">
+        <h3 class="text-center">Votre email enregistré:</h3>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-10 d-flex justify-content-center">
+            <div class=" p-2 border">{{request.user.email}}</div>
+            <!--get the user email-->
+        </div>
+    </div>
+</div>
+{% endblock %}

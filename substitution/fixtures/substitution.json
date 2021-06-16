@@ -1,0 +1,722 @@
+[
+    {
+        "model": "substitution.product",
+        "pk": 105,
+        "fields": {
+            "product_name": "Muesli Raisin, Figue, Abricot",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3229820129488/muesli-raisin-figue-abricot-bjorg",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/982/012/9488/front_fr.166.200.jpg",
+            "energy_kj": "1440",
+            "energy_kcal": "341",
+            "fat": "6.3",
+            "fiber": "9.8",
+            "proteins": "12",
+            "salt": "0.03"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 106,
+        "fields": {
+            "product_name": "100% mie complet",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3228857000166/100-mie-complet-harrys",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/885/700/0166/front_fr.145.200.jpg",
+            "energy_kj": "1013",
+            "energy_kcal": "241",
+            "fat": "4.3",
+            "fiber": "7.1",
+            "proteins": "7.2",
+            "salt": "1.09"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 107,
+        "fields": {
+            "product_name": "NESTLE CHOCAPIC Cereales Petit Dejeuner",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/7613034626844/nestle-chocapic-cereales-petit-dejeuner",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/761/303/462/6844/front_fr.165.200.jpg",
+            "energy_kj": "1625",
+            "energy_kcal": "385",
+            "fat": "4.6",
+            "fiber": "8",
+            "proteins": "8.6",
+            "salt": "0.22"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 108,
+        "fields": {
+            "product_name": "Pain 100% mie nature PT",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/3228857000852/pain-100-mie-nature-pt-harrys",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/885/700/0852/front_fr.134.200.jpg",
+            "energy_kj": "1121",
+            "energy_kcal": "268",
+            "fat": "4.3",
+            "fiber": "3.8",
+            "proteins": "7",
+            "salt": "1.13"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 109,
+        "fields": {
+            "product_name": "Flocons d'avoine complete",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3229820019307/flocons-d-avoine-complete-bjorg",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/982/001/9307/front_fr.163.200.jpg",
+            "energy_kj": "1524",
+            "energy_kcal": "362",
+            "fat": "7.1",
+            "fiber": "11",
+            "proteins": "11",
+            "salt": "0.02"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 110,
+        "fields": {
+            "product_name": "Special Muesli 30% fruits & noix cereales completes",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/5010477348678/special-muesli-30-fruits-noix-cereales-completes-jordans",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/501/047/734/8678/front_fr.182.200.jpg",
+            "energy_kj": "1523",
+            "energy_kcal": "362",
+            "fat": "7.2",
+            "fiber": "8.8",
+            "proteins": "10.2",
+            "salt": "0.03"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 111,
+        "fields": {
+            "product_name": "Pains au lait",
+            "nutrition_grade": "d",
+            "url": "https://fr.openfoodfacts.org/produit/3256540000698/pains-au-lait-pasquier",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/325/654/000/0698/front_fr.126.200.jpg",
+            "energy_kj": "1535",
+            "energy_kcal": "362",
+            "fat": "13",
+            "fiber": "1.4",
+            "proteins": "9.3",
+            "salt": "1.1"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 112,
+        "fields": {
+            "product_name": "Quaker Cruesli Melange de noix",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3168930010265/quaker-cruesli-melange-de-noix",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/316/893/001/0265/front_fr.158.200.jpg",
+            "energy_kj": "1913",
+            "energy_kcal": "462",
+            "fat": "19",
+            "fiber": "10",
+            "proteins": "8.5",
+            "salt": "0"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 113,
+        "fields": {
+            "product_name": "Pain de mie a la farine complete",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/3760049790214/pain-de-mie-a-la-farine-complete-la-boulangere-bio",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/376/004/979/0214/front_fr.132.200.jpg",
+            "energy_kj": "1184",
+            "energy_kcal": "281",
+            "fat": "4.8",
+            "fiber": "4.4",
+            "proteins": "7.1",
+            "salt": "1.5"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 114,
+        "fields": {
+            "product_name": "Country Crisp 4 Noix",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/5010477348357/country-crisp-4-noix-jordans",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/501/047/734/8357/front_fr.137.200.jpg",
+            "energy_kj": "1964",
+            "energy_kcal": "469",
+            "fat": "20.3",
+            "fiber": "6.1",
+            "proteins": "10.2",
+            "salt": "0.03"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 115,
+        "fields": {
+            "product_name": "Muesli Raisin, Figue, Abricot",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3229820129488/muesli-raisin-figue-abricot-bjorg",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/982/012/9488/front_fr.166.200.jpg",
+            "energy_kj": "1440",
+            "energy_kcal": "341",
+            "fat": "6.3",
+            "fiber": "9.8",
+            "proteins": "12",
+            "salt": "0.03"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 116,
+        "fields": {
+            "product_name": "100% mie complet",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3228857000166/100-mie-complet-harrys",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/885/700/0166/front_fr.145.200.jpg",
+            "energy_kj": "1013",
+            "energy_kcal": "241",
+            "fat": "4.3",
+            "fiber": "7.1",
+            "proteins": "7.2",
+            "salt": "1.09"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 117,
+        "fields": {
+            "product_name": "NESTLE CHOCAPIC Cereales Petit Dejeuner",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/7613034626844/nestle-chocapic-cereales-petit-dejeuner",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/761/303/462/6844/front_fr.165.200.jpg",
+            "energy_kj": "1625",
+            "energy_kcal": "385",
+            "fat": "4.6",
+            "fiber": "8",
+            "proteins": "8.6",
+            "salt": "0.22"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 118,
+        "fields": {
+            "product_name": "Pain 100% mie nature PT",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/3228857000852/pain-100-mie-nature-pt-harrys",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/885/700/0852/front_fr.134.200.jpg",
+            "energy_kj": "1121",
+            "energy_kcal": "268",
+            "fat": "4.3",
+            "fiber": "3.8",
+            "proteins": "7",
+            "salt": "1.13"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 119,
+        "fields": {
+            "product_name": "Flocons d'avoine complete",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3229820019307/flocons-d-avoine-complete-bjorg",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/982/001/9307/front_fr.163.200.jpg",
+            "energy_kj": "1524",
+            "energy_kcal": "362",
+            "fat": "7.1",
+            "fiber": "11",
+            "proteins": "11",
+            "salt": "0.02"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 120,
+        "fields": {
+            "product_name": "Special Muesli 30% fruits & noix cereales completes",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/5010477348678/special-muesli-30-fruits-noix-cereales-completes-jordans",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/501/047/734/8678/front_fr.182.200.jpg",
+            "energy_kj": "1523",
+            "energy_kcal": "362",
+            "fat": "7.2",
+            "fiber": "8.8",
+            "proteins": "10.2",
+            "salt": "0.03"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 121,
+        "fields": {
+            "product_name": "Pains au lait",
+            "nutrition_grade": "d",
+            "url": "https://fr.openfoodfacts.org/produit/3256540000698/pains-au-lait-pasquier",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/325/654/000/0698/front_fr.126.200.jpg",
+            "energy_kj": "1535",
+            "energy_kcal": "362",
+            "fat": "13",
+            "fiber": "1.4",
+            "proteins": "9.3",
+            "salt": "1.1"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 122,
+        "fields": {
+            "product_name": "Quaker Cruesli Melange de noix",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3168930010265/quaker-cruesli-melange-de-noix",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/316/893/001/0265/front_fr.158.200.jpg",
+            "energy_kj": "1913",
+            "energy_kcal": "462",
+            "fat": "19",
+            "fiber": "10",
+            "proteins": "8.5",
+            "salt": "0"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 123,
+        "fields": {
+            "product_name": "Pain de mie a la farine complete",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/3760049790214/pain-de-mie-a-la-farine-complete-la-boulangere-bio",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/376/004/979/0214/front_fr.132.200.jpg",
+            "energy_kj": "1184",
+            "energy_kcal": "281",
+            "fat": "4.8",
+            "fiber": "4.4",
+            "proteins": "7.1",
+            "salt": "1.5"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 124,
+        "fields": {
+            "product_name": "Country Crisp 4 Noix",
+            "nutrition_grade": "b",
+            "url": "https://fr.openfoodfacts.org/produit/5010477348357/country-crisp-4-noix-jordans",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/501/047/734/8357/front_fr.137.200.jpg",
+            "energy_kj": "1964",
+            "energy_kcal": "469",
+            "fat": "20.3",
+            "fiber": "6.1",
+            "proteins": "10.2",
+            "salt": "0.03"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 125,
+        "fields": {
+            "product_name": "Prince Chocolat",
+            "nutrition_grade": "d",
+            "url": "https://fr.openfoodfacts.org/produit/7622210449283/prince-chocolat-lu",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/762/221/044/9283/front_fr.429.200.jpg",
+            "energy_kj": "1955",
+            "energy_kcal": "465",
+            "fat": "17",
+            "fiber": "4",
+            "proteins": "6.4",
+            "salt": "0.58"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 126,
+        "fields": {
+            "product_name": "Biscuit Sesame",
+            "nutrition_grade": "c",
+            "url": "https://fr.openfoodfacts.org/produit/3175680011480/biscuit-sesame-gerble",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/317/568/001/1480/front_fr.139.200.jpg",
+            "energy_kj": "2025",
+            "energy_kcal": "484",
+            "fat": "22",
+            "fiber": "4.9",
+            "proteins": "11",
+            "salt": "0.61"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 127,
+        "fields": {
+            "product_name": "Nutella biscuits",
+            "nutrition_grade": "e",
+            "url": "https://fr.openfoodfacts.org/produit/8000500310427/nutella-biscuits-ferrero",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/800/050/031/0427/front_fr.63.200.jpg",
+            "energy_kj": "2146",
+            "energy_kcal": "513",
+            "fat": "24.5",
+            "fiber": "4.9",
+            "proteins": "8.4",
+            "salt": "0.529"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 128,
+        "fields": {
+            "product_name": "Excellence 70% Cacao Noir Intense",
+            "nutrition_grade": "e",
+            "url": "https://fr.openfoodfacts.org/produit/3046920022651/excellence-70-cacao-noir-intense-lindt",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/304/692/002/2651/front_fr.100.200.jpg",
+            "energy_kj": "2350",
+            "energy_kcal": "566",
+            "fat": "41",
+            "fiber": "4.9",
+            "proteins": "9.5",
+            "salt": "0.1"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 129,
+        "fields": {
+            "product_name": "Fourres Chocolat noir",
+            "nutrition_grade": "d",
+            "url": "https://fr.openfoodfacts.org/produit/3229820100234/fourres-chocolat-noir-bjorg",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/322/982/010/0234/front_fr.115.200.jpg",
+            "energy_kj": "2004",
+            "energy_kcal": "478",
+            "fat": "20",
+            "fiber": "4.8",
+            "proteins": "7.1",
+            "salt": "0.5"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 130,
+        "fields": {
+            "product_name": "Pains au lait",
+            "nutrition_grade": "d",
+            "url": "https://fr.openfoodfacts.org/produit/3256540000698/pains-au-lait-pasquier",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/325/654/000/0698/front_fr.126.200.jpg",
+            "energy_kj": "1535",
+            "energy_kcal": "478",
+            "fat": "13",
+            "fiber": "1.4",
+            "proteins": "9.3",
+            "salt": "1.1"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 131,
+        "fields": {
+            "product_name": "Biscuit lait chocolat",
+            "nutrition_grade": "c",
+            "url": "https://fr.openfoodfacts.org/produit/3175680011534/biscuit-lait-chocolat-gerble",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/317/568/001/1534/front_fr.118.200.jpg",
+            "energy_kj": "1883",
+            "energy_kcal": "449",
+            "fat": "17",
+            "fiber": "5.9",
+            "proteins": "10",
+            "salt": "0.68"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 132,
+        "fields": {
+            "product_name": "Biscuit pomme noisette",
+            "nutrition_grade": "a",
+            "url": "https://fr.openfoodfacts.org/produit/3175681851849/biscuit-pomme-noisette-gerble",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/317/568/185/1849/front_fr.124.200.jpg",
+            "energy_kj": "1902",
+            "energy_kcal": "453",
+            "fat": "17",
+            "fiber": "6.6",
+            "proteins": "9.8",
+            "salt": "0.01"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 133,
+        "fields": {
+            "product_name": "Chocolat Noir",
+            "nutrition_grade": "e",
+            "url": "https://fr.openfoodfacts.org/produit/7613035040823/chocolat-noir-nestle",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/761/303/504/0823/front_fr.164.200.jpg",
+            "energy_kj": "2304",
+            "energy_kcal": "553",
+            "fat": "35",
+            "fiber": "7.2",
+            "proteins": "5.9",
+            "salt": "0.01"
+        }
+    },
+    {
+        "model": "substitution.product",
+        "pk": 134,
+        "fields": {
+            "product_name": "Granola - L'original",
+            "nutrition_grade": "e",
+            "url": "https://fr.openfoodfacts.org/produit/7622210601988/granola-l-original-lu",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/762/221/060/1988/front_fr.133.200.jpg",
+            "energy_kj": "2092",
+            "energy_kcal": "500",
+            "fat": "24",
+            "fiber": "3.4",
+            "proteins": "7",
+            "salt": "1.19"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 7,
+        "fields": {
+            "product": 105,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 8,
+        "fields": {
+            "product": 106,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 9,
+        "fields": {
+            "product": 107,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 10,
+        "fields": {
+            "product": 108,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 11,
+        "fields": {
+            "product": 109,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 12,
+        "fields": {
+            "product": 110,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 13,
+        "fields": {
+            "product": 111,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 14,
+        "fields": {
+            "product": 112,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 15,
+        "fields": {
+            "product": 113,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 16,
+        "fields": {
+            "product": 114,
+            "name": "Aliments et boissons a base de vegetaux"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 17,
+        "fields": {
+            "product": 115,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 18,
+        "fields": {
+            "product": 116,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 19,
+        "fields": {
+            "product": 117,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 20,
+        "fields": {
+            "product": 118,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 21,
+        "fields": {
+            "product": 119,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 22,
+        "fields": {
+            "product": 120,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 23,
+        "fields": {
+            "product": 121,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 24,
+        "fields": {
+            "product": 122,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 25,
+        "fields": {
+            "product": 123,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 26,
+        "fields": {
+            "product": 124,
+            "name": "Aliments d'origine vegetale"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 27,
+        "fields": {
+            "product": 125,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 28,
+        "fields": {
+            "product": 126,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 29,
+        "fields": {
+            "product": 127,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 30,
+        "fields": {
+            "product": 128,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 31,
+        "fields": {
+            "product": 129,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 32,
+        "fields": {
+            "product": 130,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 33,
+        "fields": {
+            "product": 131,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 34,
+        "fields": {
+            "product": 132,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 35,
+        "fields": {
+            "product": 133,
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "substitution.categories",
+        "pk": 36,
+        "fields": {
+            "product": 134,
+            "name": "Snacks"
+        }
+    }
+]

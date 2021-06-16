@@ -1,0 +1,62 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Détails produit</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<!-- searched product-->
+<div class="page-section bg-dark bg-results-custom" id="searched_product"
+    style="background:url({{product.image_front_small_url}})">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center ">
+                <p class="h2 mb-5 bg-semi-transparent" name="product_name">
+                    {{product.product_name}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product informations-->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <h3 class="text-center mt-4">Nutriscore:</h3>
+            <div class="nutriscale d-flex d-inline-block">
+                {% for nutri in nutriscore_list %}
+                {%if product.nutrition_grade is nutri %}
+                <div class="{{nutri}} selected">{{nutri}}</div>
+                {% else %}
+                <div class="{{nutri}}">{{nutri}}</div>
+                {% endif %}
+                {% endfor %}
+                <!-- <div class="A">A</div>
+                <div class="B">B</div>
+                <div class="C selected">C</div>
+                <div class="D">D</div>
+                <div class="E">E</div> -->
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h3 class="text-center my-4">Repères nutritionnels pour 100g:</h3>
+            <ul>
+                <li>énergie (kj) : {{product.energy_kj}}</li>
+                <li>énergie (kcal) : {{product.energy_kcal}}</li>
+                <li>gras (g) : {{product.fat}}</li>
+                <li>fibres (g) : {{product.fiber}}</li>
+                <li>protéines (g) : {{product.proteins}}</li>
+                <li>sel (g) : {{product.salt}}</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 text-center my-4">
+            <button class="btn bg-primary my-2 my-sm-0 " type="submit" name="OFF_link_button">
+                <a class="text-white" href="{{product.url}}" target="_blank"> la fiche d'OpenFoodFacts</a>
+            </button>
+            <!-- on button link, redirection with target blank on the "url" value of the api response -->
+        </div>
+    </div>
+</div>
+{% endblock %}

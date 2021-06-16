@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    {% block title %}
+    <title>Alternative nutrition</title>
+    {% endblock %}
+    <!-- Favicon-->
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/icons/favicon.ico'%}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Third party plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/css">
+    <!-- Font awesome script-->
+    <script src="https://kit.fontawesome.com/47ef80ac93.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="padding-top:90px;" id="page-top">
+    <!--top padding for the body to compensate the navbar height with fixed position -->
+    <header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home'%}" name="name_and_logo">
+                    <img src="{% static 'assets/img/logo/logo_pur_beurre.png' %}" width="50" height="50"
+                        class="d-inline-block align-center mx-1" alt="" href="#page-top">
+                    Pur beurre
+                </a>
+                <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0 d-flex align-items-center">
+                        <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'results'%}">
+                            {% csrf_token %}
+                            <!-- {{form}} -->
+                            <input class="form-control-light mr-sm-4" name="searched_product" type="search"
+                                placeholder=" Chercher" aria-label="Search">
+                        </form>
+                        <span class="row align-items-center p-2">
+                            <li class="nav-item d-inline-flex"><a class="nav-link js-scroll-trigger p-2 p-md-1"
+                                    href="{% url 'signin'%}">
+                                    <!-- <img src="{% static 'assets/img/icons/user.png' %}" width="25" height="25"> -->
+                                    <i class="fas fa-user" style="font-size:32px;color:black;z-index:-4"></i>
+                                    {% if request.user.id %}
+                                    <div class="cm-usr">
+                                        <i class="fas fa-check "></i>
+                                    </div>
+                                    {% endif %}
+
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger p-2 p-md-1"
+                                    href="{% url 'mesaliments'%}">
+                                    <img src="{% static 'assets/img/icons/carrot.png' %}" width="50" height="50">
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger p-2 p-md-1"
+                                    href="{% url 'logout'%}" name="logout_button">
+                                    <i class="fas fa-sign-out-alt" style="font-size:2rem;color:black;"></i>
+                                </a></li>
+                        </span>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <!-- Footer-->
+    <!-- <footer class="bg-dark py-5"> -->
+    <footer class="navbar bg-dark py-5" id="footer">
+        <div class="container">
+            <a class="col nav-item js-scroll-trigger text-center text-md-right text-white"
+                href="{% url 'legal' %}">Mentions
+                légales</a>
+            <a class="col nav-item js-scroll-trigger text-center text-md-left text-white"
+                href="{% url 'home' %}#contact">Contact</a>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../static/js/scripts.js"></script>
+</body>
+
+</html>

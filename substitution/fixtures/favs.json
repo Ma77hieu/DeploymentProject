@@ -1,0 +1,18 @@
+[
+    {
+        "model": "substitution.favorites",
+        "pk": 20,
+        "fields": {
+            "product": 119,
+            "user": 36
+        }
+    },
+    {
+        "model": "substitution.favorites",
+        "pk": 21,
+        "fields": {
+            "product": 121,
+            "user": 36
+        }
+    }
+]

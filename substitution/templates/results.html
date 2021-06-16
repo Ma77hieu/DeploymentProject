@@ -1,0 +1,150 @@
+{% extends "index.html" %}
+{% block title %}
+{% if is_favorite_page%}
+<title>Mes aliments sauvegardés</title>
+{% else %}
+<title>Résultats de recherche</title>
+{% endif %}
+{% endblock %}
+{% block content %}
+{% load static %}
+<!-- searched product-->
+<div class="page-section bg-dark bg-results-custom" id="searched_product"
+    style="background:url({{search_match_product.image_front_small_url}})">
+    <!-- background image: api field "image_front_small_url" based on the product searched by the user -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="text-white col-lg-8 text-center ">
+                {% if not is_favorite_page %}
+                <p class="h2 mt-5 mb-2">
+                    Votre recherche: {{request.GET.searched_product}}
+                    <!--return the api field "generic_name" or "product_name" based on the product searched by the user-->
+                </p>
+                <p class="h2 mb-5">
+                    Produit trouvé: {{search_match_product.product_name}}
+                    <!--return the api field "generic_name" or "product_name" based on the product searched by the user-->
+                </p>
+                {% else %}
+                <p class="h2 my-5">
+                    Vos alternatives sauvegardées:
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Message in case a favorite is saved-->
+{% if fav_saved %}
+<div class="container">
+    <div class="row">
+        {% if fav_saved is True %}
+        <div class="alert alert-success my-2" role="alert">
+            Produit enregistré dans vos favoris
+        </div>
+        {% endif %}
+        {% if fav_saved is False %}
+        <div class="alert alert-warning" role="alert">
+            Il y a eu un souci dans votre requête, merci de réessayer.
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+<!-- Message in case accessing result without being logged-in-->
+{% if not request.user.id %}
+<div class="alert alert-warning my-3" role="alert">
+    Vous devez vous identifier pour pouvoir enregistrer des alternatives
+    à vos produits préférés.
+</div>
+{% endif %}
+<!-- Alternatives-->
+<div class="container">
+    <div class="row">
+        {% if products %}
+        {% for product in page_obj%}
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card m-3 text-center" name="product_card">
+
+                <span class="nutriscore {{product.nutrition_grade}}">{{product.nutrition_grade}}</span>
+                <!-- nutriscore: api field  "nutriscore_grade"-->
+                <a href="details/{{product.id}}">
+                    <img class="card-img-top mx-auto mt-2 w-auto h-auto" src="{{product.image_front_small_url}}"
+                        alt="alternative product image" style="max-width: 200px;max-height:300px">
+                </a>
+                <!-- card image: api field "image_front_small_url"-->
+                <div class="card-body text-center">
+                    <a href="details/{{product.id}}">
+                        <h5 class="card-title">{{product.product_name}}</h5>
+                    </a>
+                    <!-- card title: api field "generic_name" or "product_name" -->
+                    {% if not is_favorite_page and request.user.id%}
+                    <form method="GET" action="{% url 'results'%}">
+                        {% csrf_token %}
+                        <input type="hidden" name="searched_product" value="{{request.GET.searched_product}}">
+                        <input type="hidden" name="fav_prod" value="{{product.id}}">
+                        <button name="save_prod_button">
+                            <img class="m-1" src="{% static 'assets/img/icons/save.png' %}" alt="icone enregistrer">
+                            <!-- need to create the right interaction when save icon clicked -->
+                            <span class="card-text">Sauvegarder</span>
+                        </button>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if request.GET.searched_product %}
+    <!-- pagination in case of multiple results page -->
+    <div class="pagination my-4">
+        <span class="step-links mx-auto">
+            {% if page_obj.has_previous %}
+            <a href="?page=1&searched_product={{request.GET.searched_product}}">&laquo; 1ère page</a>
+            <a href="?page={{ page_obj.previous_page_number }}&searched_product={{request.GET.searched_product}}"> |
+                Précédente |
+            </a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}&searched_product={{request.GET.searched_product}}"> |
+                Suivante |</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}&search_product={{request.GET.searched_product}}">dernière
+                page
+                &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+    {% else %}
+    <!-- pagination in case of single results page -->
+    <div class="pagination my-4">
+        <span class="step-links mx-auto">
+            {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; 1ère page</a>
+            <a href="?page={{ page_obj.previous_page_number }}"> | Précédente | </a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"> | Suivante |</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">dernière page &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+</div>
+{% else %}
+<div class="alert alert-warning my-4" role="alert" name="no_alt_saved_warning">
+    Vous n'avez pas enregistré d'alternative à vos produits préférés pour l'instant.</br>
+    Commencez dès à présent en effectuant une recherche et en cliquant sur "sauvegarder" sur le produit de votre choix.
+</div>
+{% endif %}
+</div>
+{% endblock %}

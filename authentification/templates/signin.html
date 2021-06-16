@@ -1,0 +1,105 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Connexion/Inscription</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<!-- welcome message-->
+<div class="page-section bg-dark bg-results-custom" id="welcome" style="background:url(../assets/img/bg-masthead.jpg)">
+    <div class="container mt-1">
+        <div class="row justify-content-center">
+            <div class="text-white col-lg-8 text-center ">
+                <p class="h2 mb-1">
+                    Bienvenue!
+                    <!--return the api field "generic_name" or "product_name" based on the product searched by the user-->
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Error if user fails to log in-->
+{% if error%}
+<div class="alert alert-danger mb-1 mt-4" role="alert">
+    {{error}}
+</div>
+{%endif%}
+{% if signup %}
+<div class="container">
+    <div class="row">
+        {% if signup is True %}
+        <div class="alert alert-success w-100 my-4" role="alert">
+            <p>Félicitations vous êtes désormais inscrit.</p>
+            <p>Vous pouvez dès à présent sauvegarder des alternatives à vos aliments favoris =).</p>
+        </div>
+        {% endif %}
+        {% if signup is False %}
+        <div class="alert alert-warning" role="alert">
+            La création de votre compte à échoué =(, merci de réessayer.
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+<!-- Inscription ou connexion-->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-6 px-5 text-center" style="border-right: 1px solid #ccc;">
+            <!-- CONNEXION -->
+            <h3 class="text-center mt-4">Connexion</h3>
+            <form class="" method="POST" action="{% url 'signin'%}">
+                {% csrf_token %}
+                <label for="userName" class="form-label">Nom d'utilisateur</label>
+                <p aria-label="champ nom d'utilisateur pour la connexion">{{form.username}}</p>
+                <!-- <input type="text" id="userName" class="form-control"
+                    aria-label="champ nom d'utilisateur pour la connexion" required> -->
+                <label for="inputPassword" class="form-label">Mot de passe</label>
+                <p aria-label="champ mot de passe pour la connexion">{{form.password}}</p>
+                <!-- <input type="password" id="inputPassword" class="form-control"
+                    aria-label="champ mot de passe pour la connexion" required> -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center my-4">
+                        <button class="btn bg-primary my-2 my-sm-0 " type="submit" id_user=form.id>
+                            <a class="text-white">Je me connecte</a>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-md-6 px-5 text-center">
+            <!-- INSCRIPTION -->
+            <h3 class="text-center mt-4">Inscription</h3>
+            <form class="" method="POST" action="{% url 'signup'%}">
+                {% csrf_token %}
+                <label for="userNameSignup" class="form-label">Nom d'utilisateur</label>
+                <p aria-label="champ nom d'utilisateur pour l'inscription">{{form.username}}</p>
+                <!-- <input type="text" id="userNameSignup" class="form-control"
+                    aria-label="champ nom d'utilisateur pour l'inscription" required> -->
+                <label for="inputPasswordSignup" class="form-label">Mot de passe</label>
+                <p aria-label="champ mot de passe pour l'inscription">{{form.password}}</p>
+                <!-- <input type="password" id="inputPasswordSignup" class="form-control"
+                    aria-label="champ mot de passe pour l'inscription" required> -->
+                <label for="emailSignup" class="form-label">Email</label>
+                <p aria-label="champ email pour l'inscription">{{form.email}}</p>
+                <!-- <input type="mail" id="emailSignup" class="form-control" aria-label="champ email pour l'inscription"
+                    required> -->
+                <label for="first_nameSignup" class="form-label">Prénom</label>
+                <p aria-label="champ prénom pour l'inscription">{{form.first_name}}</p>
+                <!-- <input type="text" id="first_nameSignup" class="form-control"
+                    aria-label="champ Prénom pour l'inscription"> -->
+                <label for="last_nameSignup" class="form-label">Nom de famille</label>
+                <p aria-label="champ nom de famille pour l'inscription">{{form.last_name}}</p>
+                <!-- <input type="text" id="last_nameSignup" class="form-control"
+                    aria-label="champ Nom de famille pour l'inscription"> -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center my-4">
+                        <button class="btn bg-primary my-2 my-sm-0 " type="submit">
+                            <a class="text-white">Je m'inscris</a>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
