@@ -92,23 +92,22 @@ class OffApiData():
                     p_json["products"][prod]["image_front_small_url"])
                 self.energy_kj = (
                     p_json["products"][prod]["nutriments"]["energy_100g"])
-                if "energy-kcal_100g" in p_json(
-                        ["products"][prod]["nutriments"]):
-                    self.energy_kcal = p_json(
-                        ["products"][prod]["nutriments"]["energy-kcal_100g"])
-                if "fat_100g" in p_json(
-                        ["products"][prod]["nutriments"]):
-                    self.fat = p_json(
-                        ["products"][prod]["nutriments"]["fat_100g"])
+                if "energy-kcal_100g" in (
+                        p_json["products"][prod]["nutriments"]):
+                    self.energy_kcal = (
+                        p_json["products"][prod]["nutriments"]["energy-kcal_100g"])
+                if "fat_100g" in (p_json["products"][prod]["nutriments"]):
+                    self.fat = (
+                        p_json["products"][prod]["nutriments"]["fat_100g"])
                 if "fiber_100g" in p_json["products"][prod]["nutriments"]:
-                    self.fiber = p_json(
-                        ["products"][prod]["nutriments"]["fiber_100g"])
+                    self.fiber = (
+                        p_json["products"][prod]["nutriments"]["fiber_100g"])
                 if "proteins_100g" in p_json["products"][prod]["nutriments"]:
-                    self.proteins = p_json(
-                        ["products"][prod]["nutriments"]["proteins_100g"])
+                    self.proteins = (
+                        p_json["products"][prod]["nutriments"]["proteins_100g"])
                 if "salt_100g" in p_json["products"][prod]["nutriments"]:
-                    self.salt = p_json(
-                        ["products"][prod]["nutriments"]["salt_100g"])
+                    self.salt = (
+                        p_json["products"][prod]["nutriments"]["salt_100g"])
                 extracted_product = Product(product_name=self.product_name,
                                             nutrition_grade=self.nutriscore,
                                             url=self.url,
