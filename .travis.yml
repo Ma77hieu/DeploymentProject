@@ -5,7 +5,9 @@ python:
 before_script:
         - pip install -r requirements.txt
 
-env: DJANGO_SETTINGS_MODULE=healthieralt.settings.travis
+env: 
+        - DJANGO_SETTINGS_MODULE=healthieralt.settings.travis
+        - secure: "1t9LvBUKNmGsPbeG+7rXQ/pzOodr7ZxKBCcIF81/JO1hUNFbSSI5EcJTJsX706Tcio6jNS8E1ygcCSNp9EiwdCMy4DR+dm2Jm3ytiulfQhajr2qxT507kHwibb1O1QdWcxnW4+3LeYRH8fg/TOwoSGsY2EZphV8uxZd6QBQJRDN8dDKFH3kuN37OnEtqOrWqY88pvAOzuWvEiQpTP/khDZnuKwU/KKePzd8rbLcE8UqcCERy2DaiN3j9FJDgcKyEjQ8TeuGobf7RNIdOohDp71IdO/xQJplNI+W5KgOnNxFfNrkUMBY4o2AzA4+f8r4VS114GpUXQE96Y/vpXHqMUmES3A02IcIn+uFCSH6el98Nm4ZMFeM+hreO07p3PtiTVnewtwZezgellkNEgwcex/toQLC3r0mv0uqXdBvTcreVKu9CYHmOkmaU4cB8/EOllSUTZHTybv/M0od+GNiG8or+YRQTwRoAh3HVWarLJz3A6DUjAAH7NBS3clia7eoFqlBAhGi1GIAhEbpc+7zzY3U2QZf0oclBrQYMpSD3Xj43RyQjn3Nv5cb24I1kHXnKZzpkx9O2lsjFnu7ADdNeDSNhtTh6avj9unTEuWc0HTsAw2/eV5ivJhrKtc+Hfp6hMqrV9it0qkSfkhGOSmptO6fY82+OxASVw2SOJknPtKQ="
 
 services:
         - postgresql
