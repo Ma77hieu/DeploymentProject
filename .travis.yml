@@ -1,0 +1,14 @@
+language: python
+python:
+        - '3.8'
+
+before_script:
+        - pip install -r requirements.txt
+
+env: DJANGO_SETTINGS_MODULE="healthieralt.settings"
+
+services:
+        - postgresql
+
+script:
+        - ./manage.py test substitution.tests.tests_unitary
