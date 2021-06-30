@@ -2,7 +2,7 @@ language: python
 python:
     - '3.8'
 before-install:
-    - wget -N https://chromedriver.storage.googleapis.com/index.html?path=91.0.4472.101/chromedriver_linux64.zip -P ~/
+    - wget -N https://chromedriver.storage.googleapis.com/index.html?path=91.0.4472.101/chromedriver_linux64.zip -P ~/home/travis/
     - unzip ~/chromedriver_linux64.zip -d ~/
     - rm ~/chromedriver_linux64.zip
     - sudo mv -f ~/chromedriver /usr/local/share/
