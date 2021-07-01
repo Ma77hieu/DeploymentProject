@@ -1,4 +1,5 @@
 language: python
+dist: xenial
 python:
     - '3.8'
 before-install:
@@ -10,9 +11,6 @@ before-install:
     - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 addons:
     chrome: stable
-    apt:
-        packages:
-            - dpkg
 before_script:
     - pip install -r requirements.txt
     - google-chrome-stable --no-sandbox --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
