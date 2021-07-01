@@ -13,7 +13,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.selenium = WebDriver()
+        cls.selenium = WebDriver(options='--window-size=1420,1080')
         cls.selenium.implicitly_wait(10)
 
     @classmethod
