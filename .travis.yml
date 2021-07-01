@@ -13,7 +13,7 @@ addons:
     chrome: stable
 before_script:
     - pip install -r requirements.txt
-    - google-chrome-stable --no-sandbox --disable-dev-shm-usage --headless --remote-debugging-port=9222 http://localhost
+    - google-chrome-stable --no-sandbox --disable-dev-shm-usage --headless --remote-debugging-port=9222 http://localhost &
 env:
     global:
     - DJANGO_SETTINGS_MODULE=healthieralt.settings.travis
