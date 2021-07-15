@@ -1,5 +1,6 @@
 from decouple import config
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
@@ -13,7 +14,10 @@ class MySeleniumTests(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.selenium = WebDriver()
+        #uncomment the following lines to execute LOCAL headless selenium tests
+        # specific_options=Options()
+        # specific_options.add_argument("--headless")
+        # cls.selenium = WebDriver(options=specific_options)
         cls.selenium.implicitly_wait(10)
 
     @classmethod
