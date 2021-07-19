@@ -23,5 +23,6 @@ env:
     - secure: ScKIM+tl1A5Kt8pq3shKEsXxcl3m+VqzvExCRLhC7X1YSY6o+uUNw8vtluQI3S8usWc99IYrZ+GIIGG8Bb9LN/x4KECUhyrqAdwkjdGYjoooLrISk84PUcCv/DiCSYQ9FQ+zPtCEWGURahYXBSbseHirjVdghH2KkmkjYWj5wGSzzR0dFChRGVGtBR1i1EzMZOG1BF31b7WuL9+lAHCmoeeS0xFuJfVYi1Haxi6g2fpxyzrE2yeiYjKehCpzGvuXr/f3qTxQHIettjTtTTh66SkpUvlgY+LF+TzlLNJzb3aykoPTvvUG8T7MHhOtUJiXF+BfUDdXo/ihDa8xdLZguq+c9jkHsK4XumS6nNyHpnXfr2r1m1AIXQkhnC529qO9xMNOyHjRCg8hiKJZSf6hv3/+MR89nPvL2/mqNLwW16zAlCgr+ioIgGXqPIIAZRnGMZkV0V0+LH2uQEs1O+u/yEW30nBcIOZiH+9mV4qS9c4r3i+KyWJXTxxPKE4NeRZS5jhYhktOsEP6fBtSoUxm96Cr6pvzom2nsEEdzlJY2H/F0pun+lTp3czQzI7roVfkFiP0X2EXknJ4mnHogu89HCQWBp2HjNmnJyfuINKNd7q0RUstD7Kura+Wods5LuSm66f+leHlADFdKqVP2gMeR8ESPhqzhtW0FqfIXgOZjl8=
 services:
     - postgresql
+    - xvfb
 script:
     - "./manage.py test"
