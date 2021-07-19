@@ -8,12 +8,12 @@ before-install:
     - rm ~/chromedriver_linux64.zip
     - sudo mv -f ~/chromedriver /usr/local/share/
     - sudo chmod +x /usr/local/share/chromedriver
-    - sudo ln -s /usr/local/share/chromedriver /usr/bin/google-chrome
+    - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 addons:
     chrome: stable
 before_script:
     - pip install -r requirements.txt
-    - google-chrome-stable --no-sandbox --disable-dev-shm-usage --headless --remote-debugging-port=9222 http://localhost &
+    - google-chrome-stable --no-sandbox --disable-dev-shm-usage --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 env:
     global:
     - DJANGO_SETTINGS_MODULE=healthieralt.settings.travis
