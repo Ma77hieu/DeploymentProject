@@ -18,6 +18,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
         # specific_options=Options()
         # specific_options.add_argument("--headless")
         # cls.selenium = WebDriver(options=specific_options)
+        cls.selenium = WebDriver()
         cls.selenium.implicitly_wait(10)
 
     @classmethod
