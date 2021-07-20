@@ -80,7 +80,6 @@ class MySeleniumTests(StaticLiveServerTestCase):
         timeout = 2
         collapsed_navbar_button = self.selenium.find_element_by_class_name(
             "navbar-toggler-icon")
-        # is_navbar_visible=self.selenium.find_element_by_id('navbarResponsive').is_displayed()
         is_navbar_visible=collapsed_navbar_button.is_displayed()
         if is_navbar_visible:
             collapsed_navbar_button.click()
