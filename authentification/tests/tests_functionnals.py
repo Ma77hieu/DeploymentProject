@@ -81,7 +81,8 @@ class MySeleniumTests(StaticLiveServerTestCase):
         timeout = 2
         collapsed_navbar_button = self.selenium.find_element_by_class_name(
             "navbar-toggler-icon")
-        collapsed_navbar_button.click()
+        if collapsed_navbar_button:
+            collapsed_navbar_button.click()
         signout_button = self.selenium.find_element_by_name("logout_button")
         signout_button.click()
         WebDriverWait(self.selenium, timeout).until(

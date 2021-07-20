@@ -92,7 +92,8 @@ class MySeleniumTests(StaticLiveServerTestCase):
                 collapsed_navbar_button = (
                     self.selenium.find_element_by_class_name(
                         "navbar-toggler-icon"))
-                collapsed_navbar_button.click()
+                if collapsed_navbar_button:
+                    collapsed_navbar_button.click()
             searchbar = (
                 self.selenium.find_elements_by_name("searched_product")
                 [both_search_input])
