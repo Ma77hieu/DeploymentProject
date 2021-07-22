@@ -54,7 +54,7 @@ class Services():
             self.log_search_with_results(request,False)
         return (redirect_to, context)
 
-    def log_search_with_results(request, is_match_found):
+    def log_search_with_results(self,request, is_match_found):
         logger = logging.getLogger(__name__)
         if is_match_found:
             log_message="A successfull search have been made"
