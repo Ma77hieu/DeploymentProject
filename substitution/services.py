@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from .constants import NBR_RESULTS_PER_PAGE as per_page
 from .constants import NOT_LOGGED_IN, NO_PROD_FOUND
 from substitution.search_engine import Substitutes
+import logging
 
 
 class Services():
@@ -45,11 +46,26 @@ class Services():
                 'search_match_product': search_match_product,
                 'page_obj': page_obj,
                 'fav_saved': fav_saved}
+            self.log_search_with_results(request,True)
         else:
             redirect_to = "home.html"
             error = NO_PROD_FOUND
             context = {'error': error}
+            self.log_search_with_results(request,False)
         return (redirect_to, context)
+
+    def log_search_with_results(request, is_match_found):
+        logger = logging.getLogger(__name__)
+        if is_match_found:
+            log_message="A successfull search have been made"
+        else:
+            log_message="A search have been made but no results have been found"
+        logger.info(log_message, exc_info=True, extra={
+        # Optionally pass a request and we'll grab any information we can
+        'request': request,
+    })
+
+
 
     def details(self, request, product_id):
         """access a specific product details page based on product id"""
