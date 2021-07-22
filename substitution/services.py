@@ -60,7 +60,7 @@ class Services():
             log_message="A successfull search have been made"
         else:
             log_message="A search have been made but no results have been found"
-        logger.info(log_message, exc_info=True, extra={
+        logger.error(log_message, exc_info=True, extra={
         # Optionally pass a request and we'll grab any information we can
         'request': request,
     })
