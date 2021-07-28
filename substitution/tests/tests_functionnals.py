@@ -208,9 +208,9 @@ class MySeleniumTests(StaticLiveServerTestCase):
         OFF_link_button.click()
         time.sleep(WAIT_TIME)
         self.selenium.switch_to_window(self.selenium.window_handles[1])
-        product_name = "flocons d'avoine - Bjorg - 500g"
+        product_name = "flocons d'avoine"
         link_OK = False
-        if product_name == (
+        if product_name in (
                 self.selenium.find_element_by_tag_name('h1').text):
             link_OK = True
         assert link_OK is True
