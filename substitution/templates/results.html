@@ -76,6 +76,7 @@
                     <a href="details/{{product.id}}">
                         <h5 class="card-title">{{product.product_name}}</h5>
                     </a>
+                    <h5 class="card-text">Note des utilisateurs:</br> 3,52 / 5</h5>
                     <!-- card title: api field "generic_name" or "product_name" -->
                     {% if not is_favorite_page and request.user.id%}
                     <form method="GET" action="{% url 'results'%}">
