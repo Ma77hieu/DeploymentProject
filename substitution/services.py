@@ -85,6 +85,14 @@ class Services():
             rating_to_save=Ratings(
                 product=rated_product,user=user_currently_rating,rating=user_rating)
             rating_to_save.save()
+            all_ratings_of_product=Ratings.objects.filter(
+                product_id=rated_product).values_list('rating', flat=True)
+            print('all ratings of the product: {}'.format(all_ratings_of_product))
+            avg_product_rating=sum(all_ratings_of_product)/len(all_ratings_of_product)
+            print('AVERAGE rating of the product: {}'.format(avg_product_rating))
+            product_to_update=Product.objects.get(pk=rated_product.id)
+            product_to_update.average_rating=avg_product_rating
+            product_to_update.save()
         form = RatingForm()
         return form
 
