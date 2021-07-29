@@ -1,4 +1,6 @@
-from substitution.models import Product, Favorites
+from substitution.models import Product, Favorites, Ratings
+from authentification.models import User
+from substitution.forms import RatingForm
 from django.core.paginator import Paginator
 from .constants import NBR_RESULTS_PER_PAGE as per_page
 from .constants import NOT_LOGGED_IN, NO_PROD_FOUND
@@ -72,8 +74,20 @@ class Services():
         product = Product.objects.get(pk=product_id)
         nutriscore_list = ['a', 'b', 'c', 'd', 'e']
         redirect_to = 'detailprod.html'
-        context = {'product': product, 'nutriscore_list': nutriscore_list}
+        form=self.get_rating(request, product)
+        context = {'form':form,'product': product, 'nutriscore_list': nutriscore_list}
         return (redirect_to, context)
+
+    def get_rating(self, request, rated_product):
+        if request.method == "POST":
+            user_rating = request.POST['rating']
+            user_currently_rating = User.objects.get(pk=request.user.id)
+            rating_to_save=Ratings(
+                product=rated_product,user=user_currently_rating,rating=user_rating)
+            rating_to_save.save()
+        form = RatingForm()
+        return form
+
 
     def mesaliments(self, request):
         """access the saved favorites of a user based on logged user id"""

@@ -1,11 +1,5 @@
 from django.db import models
-# if __name__ == "main":
-#     from authentification.models import User
-# else:
-#     from ..authentification.models import User
 from authentification.models import User
-# from django.contrib.auth.models import User
-
 
 # Create your models here.
 
@@ -41,18 +35,6 @@ class Favorites(models.Model):
 
     def __str__(self):
         return self.product
-
-# class Ratings(models.Model):
-#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     class Rating (models.IntegerChoices):
-#         ZERO=0
-#         UN=1
-#         DEUX=2
-#         TROIS=3
-#         QUATRE=4
-#         CINQ=5
-#     rating = models.IntegerField(choices=Rating.choices)
 
 class Ratings(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
