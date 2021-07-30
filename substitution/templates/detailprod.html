@@ -60,9 +60,17 @@
     <div class="row my-3">
         <div class="col-12 text-center my-2">
             {%if product.average_rating is NULL%}
-            <h3 class="text-center mb-2">Note des utilisateurs: pas encore noté</h3>
+            <h3 class="text-center mb-2">
+                Note des utilisateurs:
+                <span name="displayed_rating">{{product.average_rating}} pas encore noté</span>
+            </h3>
             {% else %}
-            <h3 class="text-center mb-2">Note des utilisateurs: {{product.average_rating|floatformat:2}}/4</h3>
+            <h3 class="text-center mb-2">
+                Note des utilisateurs:
+                <span name="displayed_rating">
+                    {{product.average_rating|floatformat:2}}/4
+                </span>
+            </h3>
             {% endif %}
         </div>
     </div>

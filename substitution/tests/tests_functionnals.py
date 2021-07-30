@@ -4,23 +4,26 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.keys import Keys
 from substitution.constants import NO_PROD_FOUND, WAIT_TIME
 import time
 
 
 class MySeleniumTests(StaticLiveServerTestCase):
-    fixtures = ['substitution.json', 'users.json', 'favs.json']
+    fixtures = ['substitution.json', 'users.json', 'favs.json', 'ratings.json']
 
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        is_travis = 'TRAVIS' in os.environ 
-        #detect if tests run locally or in server through travis
-        if is_travis:
-            cls.selenium = WebDriver()
+        is_travis = 'TRAVIS' in os.environ
+        # detect if tests run locally or in server through travis
+        if not is_travis:
+            specific_options = Options()
+            specific_options.add_argument("start-maximized")
+            cls.selenium = WebDriver(options=specific_options)
         else:
-            specific_options=Options()
+            specific_options = Options()
             specific_options.add_argument("--no-sandbox")
             specific_options.add_argument("--headless")
             specific_options.add_argument("--disable-dev-shm-usage")
@@ -92,7 +95,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
                 collapsed_navbar_button = (
                     self.selenium.find_element_by_class_name(
                         "navbar-toggler-icon"))
-                is_navbar_visible=collapsed_navbar_button.is_displayed()
+                is_navbar_visible = collapsed_navbar_button.is_displayed()
                 if is_navbar_visible:
                     collapsed_navbar_button.click()
             searchbar = (
@@ -119,7 +122,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
                 collapsed_navbar_button = (
                     self.selenium.find_element_by_class_name(
                         "navbar-toggler-icon"))
-                is_navbar_visible=collapsed_navbar_button.is_displayed()
+                is_navbar_visible = collapsed_navbar_button.is_displayed()
                 if is_navbar_visible:
                     collapsed_navbar_button.click()
             searchbar = (
@@ -208,9 +211,9 @@ class MySeleniumTests(StaticLiveServerTestCase):
         OFF_link_button.click()
         time.sleep(WAIT_TIME)
         self.selenium.switch_to_window(self.selenium.window_handles[1])
-        product_name = "Flocons d'avoine - Bjorg - 500 g"
-        OFF_title_page=self.selenium.find_element_by_tag_name('h1').text
-        print("OFF title page {}".format(OFF_title_page))
+        product_name = "Flocons d'avoine - Bjorg"
+        # OFF_title_page=self.selenium.find_element_by_tag_name('h1').text
+        # print("OFF title page {}".format(OFF_title_page))
         link_OK = False
         if product_name in (
                 self.selenium.find_element_by_tag_name('h1').text):
@@ -265,3 +268,19 @@ class MySeleniumTests(StaticLiveServerTestCase):
         if h1 == title_homepage:
             redirection = True
         assert redirection is True
+
+    def test_rating(self):
+        """tests the addition of a rating to a product"""
+        self.user_login()
+        timeout = 2
+        self.selenium.get('{}'.format(self.live_server_url + '/details/108'))
+        select_element = self.selenium.find_element_by_id('id_rating')
+        select_object = Select(select_element)
+        select_object.select_by_index(2)
+        self.selenium.find_element_by_name("product_rate_button").click()
+        WebDriverWait(self.selenium, timeout).until(
+            lambda driver: driver.find_element_by_tag_name('body'))
+        time.sleep(WAIT_TIME)
+        product_rating = self.selenium.find_element_by_name(
+            'displayed_rating').text
+        assert product_rating == "2.50/4"
