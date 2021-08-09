@@ -12,7 +12,8 @@
             "fat": "6.3",
             "fiber": "9.8",
             "proteins": "12",
-            "salt": "0.03"
+            "salt": "0.03",
+            "average_rating": null
         }
     },
     {
@@ -28,7 +29,8 @@
             "fat": "4.3",
             "fiber": "7.1",
             "proteins": "7.2",
-            "salt": "1.09"
+            "salt": "1.09",
+            "average_rating": null
         }
     },
     {
@@ -44,7 +46,8 @@
             "fat": "4.6",
             "fiber": "8",
             "proteins": "8.6",
-            "salt": "0.22"
+            "salt": "0.22",
+            "average_rating": "3.52"
         }
     },
     {
@@ -60,7 +63,8 @@
             "fat": "4.3",
             "fiber": "3.8",
             "proteins": "7",
-            "salt": "1.13"
+            "salt": "1.13",
+            "average_rating": "3"
         }
     },
     {
@@ -76,7 +80,8 @@
             "fat": "7.1",
             "fiber": "11",
             "proteins": "11",
-            "salt": "0.02"
+            "salt": "0.02",
+            "average_rating": null
         }
     },
     {
@@ -92,7 +97,8 @@
             "fat": "7.2",
             "fiber": "8.8",
             "proteins": "10.2",
-            "salt": "0.03"
+            "salt": "0.03",
+            "average_rating": null
         }
     },
     {
@@ -108,7 +114,8 @@
             "fat": "13",
             "fiber": "1.4",
             "proteins": "9.3",
-            "salt": "1.1"
+            "salt": "1.1",
+            "average_rating": null
         }
     },
     {
@@ -124,7 +131,8 @@
             "fat": "19",
             "fiber": "10",
             "proteins": "8.5",
-            "salt": "0"
+            "salt": "0",
+            "average_rating": null
         }
     },
     {
@@ -140,7 +148,8 @@
             "fat": "4.8",
             "fiber": "4.4",
             "proteins": "7.1",
-            "salt": "1.5"
+            "salt": "1.5",
+            "average_rating": null
         }
     },
     {
@@ -156,7 +165,8 @@
             "fat": "20.3",
             "fiber": "6.1",
             "proteins": "10.2",
-            "salt": "0.03"
+            "salt": "0.03",
+            "average_rating": null
         }
     },
     {
@@ -172,7 +182,8 @@
             "fat": "6.3",
             "fiber": "9.8",
             "proteins": "12",
-            "salt": "0.03"
+            "salt": "0.03",
+            "average_rating": null
         }
     },
     {
@@ -188,7 +199,8 @@
             "fat": "4.3",
             "fiber": "7.1",
             "proteins": "7.2",
-            "salt": "1.09"
+            "salt": "1.09",
+            "average_rating": null
         }
     },
     {
@@ -204,7 +216,8 @@
             "fat": "4.6",
             "fiber": "8",
             "proteins": "8.6",
-            "salt": "0.22"
+            "salt": "0.22",
+            "average_rating": null
         }
     },
     {
@@ -220,7 +233,8 @@
             "fat": "4.3",
             "fiber": "3.8",
             "proteins": "7",
-            "salt": "1.13"
+            "salt": "1.13",
+            "average_rating": null
         }
     },
     {
@@ -236,7 +250,8 @@
             "fat": "7.1",
             "fiber": "11",
             "proteins": "11",
-            "salt": "0.02"
+            "salt": "0.02",
+            "average_rating": null
         }
     },
     {
@@ -252,7 +267,8 @@
             "fat": "7.2",
             "fiber": "8.8",
             "proteins": "10.2",
-            "salt": "0.03"
+            "salt": "0.03",
+            "average_rating": null
         }
     },
     {
@@ -268,7 +284,8 @@
             "fat": "13",
             "fiber": "1.4",
             "proteins": "9.3",
-            "salt": "1.1"
+            "salt": "1.1",
+            "average_rating": null
         }
     },
     {
@@ -284,7 +301,8 @@
             "fat": "19",
             "fiber": "10",
             "proteins": "8.5",
-            "salt": "0"
+            "salt": "0",
+            "average_rating": null
         }
     },
     {
@@ -300,7 +318,8 @@
             "fat": "4.8",
             "fiber": "4.4",
             "proteins": "7.1",
-            "salt": "1.5"
+            "salt": "1.5",
+            "average_rating": null
         }
     },
     {
@@ -316,7 +335,8 @@
             "fat": "20.3",
             "fiber": "6.1",
             "proteins": "10.2",
-            "salt": "0.03"
+            "salt": "0.03",
+            "average_rating": null
         }
     },
     {
@@ -332,7 +352,8 @@
             "fat": "17",
             "fiber": "4",
             "proteins": "6.4",
-            "salt": "0.58"
+            "salt": "0.58",
+            "average_rating": null
         }
     },
     {
@@ -348,7 +369,8 @@
             "fat": "22",
             "fiber": "4.9",
             "proteins": "11",
-            "salt": "0.61"
+            "salt": "0.61",
+            "average_rating": null
         }
     },
     {
@@ -364,7 +386,8 @@
             "fat": "24.5",
             "fiber": "4.9",
             "proteins": "8.4",
-            "salt": "0.529"
+            "salt": "0.529",
+            "average_rating": null
         }
     },
     {
@@ -380,7 +403,8 @@
             "fat": "41",
             "fiber": "4.9",
             "proteins": "9.5",
-            "salt": "0.1"
+            "salt": "0.1",
+            "average_rating": null
         }
     },
     {
@@ -396,7 +420,8 @@
             "fat": "20",
             "fiber": "4.8",
             "proteins": "7.1",
-            "salt": "0.5"
+            "salt": "0.5",
+            "average_rating": null
         }
     },
     {
@@ -412,7 +437,8 @@
             "fat": "13",
             "fiber": "1.4",
             "proteins": "9.3",
-            "salt": "1.1"
+            "salt": "1.1",
+            "average_rating": null
         }
     },
     {
@@ -428,7 +454,8 @@
             "fat": "17",
             "fiber": "5.9",
             "proteins": "10",
-            "salt": "0.68"
+            "salt": "0.68",
+            "average_rating": null
         }
     },
     {
@@ -444,7 +471,8 @@
             "fat": "17",
             "fiber": "6.6",
             "proteins": "9.8",
-            "salt": "0.01"
+            "salt": "0.01",
+            "average_rating": null
         }
     },
     {
@@ -460,7 +488,8 @@
             "fat": "35",
             "fiber": "7.2",
             "proteins": "5.9",
-            "salt": "0.01"
+            "salt": "0.01",
+            "average_rating": null
         }
     },
     {
@@ -476,7 +505,8 @@
             "fat": "24",
             "fiber": "3.4",
             "proteins": "7",
-            "salt": "1.19"
+            "salt": "1.19",
+            "average_rating": null
         }
     },
     {

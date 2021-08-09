@@ -1,9 +1,13 @@
+from authentification.models import User
 from django.test import TestCase
 from substitution.search_engine import Substitutes
+from substitution.services import Services
+from substitution.models import Product, Ratings
+from django.http import HttpRequest
 
 
 class searchEngineTests(TestCase):
-    fixtures = ['substitution.json']
+    fixtures = ['substitution.json', 'users.json', 'favs.json', 'ratings.json']
     substitute = Substitutes()
     specific_charac_string = "aaeeee  uu"
     assertion_list = ['a', 'DU', 'saucisson', 'Nutella', '42']
@@ -87,3 +91,27 @@ class searchEngineTests(TestCase):
         print("global: {}".format(global_alt_ids))
         self.assertEqual(global_alt_ids, (
                          [105, 106, 109, 110, 112], True))
+
+    def test_add_rating(self):
+        """tests the addition of a rating to a product"""
+        initial_rating = Ratings.objects.filter(
+            product_id=109).values_list('rating', flat=True)[0]
+        # print("initial rating: {}".format(initial_rating))
+        test_request = HttpRequest()
+        test_request.POST = {"rating": 4}
+        test_user = User(pk=36)
+        test_request.user = test_user
+        test_request.method = "POST"
+        test_product = Product.objects.get(pk=109)
+        # print("test_request.POST: {}".format(test_request.POST))
+        # print("test_request.user.id: {}".format(test_request.user.id))
+        Services().get_rating(test_request, test_product)
+        new_ratings = Ratings.objects.filter(
+            product_id=109).values_list('rating', flat=True)
+        all_ratings = []
+        for rating in new_ratings:
+            all_ratings.append(rating)
+            # print("all ratings:{}".format(all_ratings))
+        old_and_new_ratings = [initial_rating, all_ratings]
+        self.assertEqual(old_and_new_ratings, (
+                         [0, [0, 4]]))

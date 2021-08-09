@@ -1,0 +1,38 @@
+[
+    {
+        "model": "substitution.ratings",
+        "pk": 20,
+        "fields": {
+            "rating": 4,
+            "product_id": 107,
+            "user_id": 36
+        }
+    },
+    {
+        "model": "substitution.ratings",
+        "pk": 21,
+        "fields": {
+            "rating": 0,
+            "product_id": 107,
+            "user_id": 37
+        }
+    },
+    {
+        "model": "substitution.ratings",
+        "pk": 22,
+        "fields": {
+            "rating": 3,
+            "product_id": 108,
+            "user_id": 37
+        }
+    },
+    {
+        "model": "substitution.ratings",
+        "pk": 23,
+        "fields": {
+            "rating": 0,
+            "product_id": 109,
+            "user_id": 36
+        }
+    }
+]

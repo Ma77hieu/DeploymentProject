@@ -2,5 +2,5 @@
 source=.
 
 [report]
-omit=*envp8*,*sgi*
+omit=*envp10*,*sgi*
 fail_under=80

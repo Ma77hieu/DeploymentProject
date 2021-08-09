@@ -76,6 +76,12 @@
                     <a href="details/{{product.id}}">
                         <h5 class="card-title">{{product.product_name}}</h5>
                     </a>
+                    {%if product.average_rating is NULL%}
+                    <h5 class="card-text"><small>Note des utilisateurs:</br> pas encore noté</small></h5>
+                    {% else %}
+                    <h5 class="card-text"><small>Note des utilisateurs:</br>
+                            {{product.average_rating|floatformat:2}}/4</small></h5>
+                    {% endif %}
                     <!-- card title: api field "generic_name" or "product_name" -->
                     {% if not is_favorite_page and request.user.id%}
                     <form method="GET" action="{% url 'results'%}">

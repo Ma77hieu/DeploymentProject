@@ -30,11 +30,6 @@
                 <div class="{{nutri}}">{{nutri}}</div>
                 {% endif %}
                 {% endfor %}
-                <!-- <div class="A">A</div>
-                <div class="B">B</div>
-                <div class="C selected">C</div>
-                <div class="D">D</div>
-                <div class="E">E</div> -->
             </div>
         </div>
         <div class="col-12 col-md-6">
@@ -46,17 +41,60 @@
                 <li>fibres (g) : {{product.fiber}}</li>
                 <li>protéines (g) : {{product.proteins}}</li>
                 <li>sel (g) : {{product.salt}}</li>
+                <li>ID : {{product.id}}</li>
             </ul>
         </div>
 
     </div>
-    <div class="row mt-4">
+
+    <div class="row my-2">
         <div class="col-12 text-center my-4">
-            <button class="btn bg-primary my-2 my-sm-0 " type="submit" name="OFF_link_button">
+            <button class="btn bg-primary my-4 my-sm-0 " type="submit" name="OFF_link_button">
                 <a class="text-white" href="{{product.url}}" target="_blank"> la fiche d'OpenFoodFacts</a>
             </button>
+
             <!-- on button link, redirection with target blank on the "url" value of the api response -->
         </div>
     </div>
+
+    <div class="row my-3">
+        <div class="col-12 text-center my-2">
+            {%if product.average_rating is NULL%}
+            <h3 class="text-center mb-2">
+                Note des utilisateurs:
+                <span name="displayed_rating">{{product.average_rating}} pas encore noté</span>
+            </h3>
+            {% else %}
+            <h3 class="text-center mb-2">
+                Note des utilisateurs:
+                <span name="displayed_rating">
+                    {{product.average_rating|floatformat:2}}/4
+                </span>
+            </h3>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12 text-center my-2">
+            <p>Vous souhaitez noter ce produit?</p>
+            {%if request.user.id%}
+            <form class="" method="POST" action="{% url 'details' product.id %}">
+                {% csrf_token %}
+                <span>Note: {{form.rating}}</span>
+                <input type="hidden" name="user_currently_rating_id" value="{{request.user.id}}">
+                <input type="hidden" name="product_currently_rated_id" value="{{product.id}}">
+                <button class="btn bg-primary my-4 my-sm-0 " type="submit" name="product_rate_button">
+                    Noter le produit
+                </button>
+            </form>
+            {% else %}
+            <p class="alert-warning">Identifiez-vous</p>
+            {% endif %}
+        </div>
+    </div>
+
+
+
 </div>
 {% endblock %}
